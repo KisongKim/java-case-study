@@ -56,4 +56,13 @@ public class Hotel {
     public String toString() {
         return "Hotel{" + "id=" + id + ", name='" + name + '\'' + ", rating=" + rating + ", stars=" + stars + '}';
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 31 * hash + (int) id;
+        hash = 31 * hash + name.hashCode();
+        return hash;
+    }
+
 }

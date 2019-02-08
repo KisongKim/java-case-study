@@ -33,4 +33,11 @@ public class HotelWithOffers {
     public String toString() {
         return "HotelWithOffers{" + "hotel=" + hotel + ", offers=" + offers + '}';
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return 31 * hash + hotel.hashCode();
+    }
+
 }
